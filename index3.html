@@ -15,10 +15,11 @@
   
     <script>
       function onClick(e) {
-        e.preventDefault();
+        //e.preventDefault();
         grecaptcha.ready(function() {
           grecaptcha.execute('6LeDQagbAAAAAMqIxw7159_KDeb0PCc44ZkN0g0w', {action: 'submit'}).then(function(token) {
               // Add your logic to submit to your backend server here.
+           alert(token);
           });
         });
       }
