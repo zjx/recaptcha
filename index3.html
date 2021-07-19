@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google reCAPTCHA V3 Test</title>
+<meta charset=utf-8>
+ <script src="https://www.google.com/recaptcha/api.js?render=6LeDQagbAAAAAMqIxw7159_KDeb0PCc44ZkN0g0w"></script>
+  
+  <script>
+   function onSubmit(token) {
+     //document.getElementById("demo-form").submit();
+     alert(token);
+   }
+ </script>
+  
+</head>
+<body>
+<h1>Google reCAPTCHA Test</h1>
+
+  
+  <button class="g-recaptcha" 
+        data-sitekey="6LeDQagbAAAAAMqIxw7159_KDeb0PCc44ZkN0g0w" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+  
+</body>
+</html>
