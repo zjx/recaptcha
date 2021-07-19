@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
+    <script type="text/javascript">
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var widgetId1;
+      var widgetId2;
+      var onloadCallback = function() {
+        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+        widgetId1 = grecaptcha.render('example1', {
+          'sitekey' : '6LcgSqgbAAAAAOitgy7DZ1nRQqx7J5zE43CHNDrs',
+          'theme' : 'light'
+        });
+
+      };
+    </script>
+  </head>
+  <body>
+    <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+    <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+      <div id="example1"></div>
+      <br>
+      <input type="submit" value="getResponse">
+    </form>
+    <br>
+    <script src="https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+  </body>
+</html>
