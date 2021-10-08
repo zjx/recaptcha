@@ -11,7 +11,7 @@
       var onloadCallback = function() {
         // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
         // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-        widgetId1 = grecaptcha.render('example1', {
+        widgetId1 = grecaptcha.enterprise.render('example1', {
           'sitekey' : '6Ldb4cobAAAAAFeg32mGgKcEJ8l2DOd6TMOoYP0s',
           'theme' : 'light'
         });
@@ -21,13 +21,13 @@
   </head>
   <body>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
-    <form action="javascript:var res1 = grecaptcha.getResponse(widgetId1);console.log(res1);alert(res1);">
+    <form action="javascript:var res1 = grecaptcha.enterprise.getResponse(widgetId1);console.log(res1);alert(res1);">
       <div id="example1"></div>
       <br>
       <input type="submit" value="getResponse">
     </form>
     <br>
-    <script src="https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    <script src="https://www.recaptcha.net/recaptcha/enterprise.js?onload=onloadCallback&render=explicit"
         async defer>
     </script>
   </body>
